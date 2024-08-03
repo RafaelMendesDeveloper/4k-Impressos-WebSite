@@ -4,6 +4,7 @@ header li {
 
 header a {
         text-decoration: none;
+        text-transform: uppercase;
         color: #fff;
         font-size: 1.7rem;
         position: relative;
@@ -15,17 +16,89 @@ header a {
         z-index: 1;
     }
 
-    /* HEADER */
+.h-hover {
+    position: relative;
+    background: #fff;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+
+.h-hover:hover {
+    background: var(--clr);
+    color: var(--clr);
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px var(--clr);
+}
+
+.h-hover:before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: black;
+}
+
+.h-hover span {
+    position: relative;
+    z-index: 1;
+}
+
+.h-hover i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+.h-hover i::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background: black;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+.h-hover:hover i::before {
+    width: 20px;
+    left: 20%;
+}
+
+.h-hover i::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    background: black;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+.h-hover:hover i::after {
+    width: 20px;
+    left: 80%;
+}
+
+
     header {
-        position: relative;
+        position: fixed;
+        background: black;
         padding: 0 2rem;
+        width: 100%;
     }
 
     .navbar {
-        width: 100%;
         height: 60px;
         max-width: 1200px;
-        margin: 0 auto;
+        margin: 10px auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -42,42 +115,7 @@ header a {
         gap: 2rem;
     }
 
-    .navbar .links a::before,
-    .navbar .links a::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        transition: .3s;
-        z-index: -1;
-    }
 
-    .navbar .links a::after {
-        top: 2px;
-        left: 0;
-        background-color: rgba(255,255,255,0.5);
-        transform: scaleY(0);
-        opacity: 0;
-    }
-
-    .navbar .links a::before {
-        top: 0;
-        left: 0;
-        border-top: 2px solid rgba(255,255,255,255);
-        border-bottom: 2px solid rgba(255,255,255,255);
-        transform: scaleY(2);
-        opacity: 0;
-    }
-
-    .navbar .links a:hover::before {
-        transform: scaleY(1);
-        opacity: 1;
-    }
-
-    .navbar .links a:hover::after {
-        transform: scaleY(1);
-        opacity: 1;
-    }
 
     .navbar .toggle_btn {
         color: #fff;
@@ -91,7 +129,6 @@ header a {
         color: rgb(0,0,0);
         padding: 1rem 3rem;
         border: none;
-        border-radius: 20px;
         font-size: 1.7rem;
         font-weight: bold;
         cursor: pointer;
@@ -106,8 +143,6 @@ header a {
     .action_btn:active {
         transform: scale(0.95);
     }
-
-    /* Estilos anteriores */
 
     .dropdown_menu {
         opacity: 0;
@@ -135,6 +170,10 @@ header a {
         align-items: center;
         justify-content: center;
     }
+
+.dropdown_menu li a:hover {
+    transform: scale(1.1);
+}
 
     .dropdown_menu .action_btn {
         padding: 1rem;
