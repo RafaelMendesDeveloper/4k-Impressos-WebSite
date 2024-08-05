@@ -24,8 +24,7 @@
                 <li><a class="h-hover" style="--clr:yellow" href="#"><span>Portfólio</span><i></i></a></li>
                 <li><a class="h-hover" style="--clr:white" href="#"><span>Contato</span><i></i></a></li>
             </ul>
-            <!--    link api whatsapp grafica-->
-            <a href="#" class="action_btn">Fale Conosco</a>
+            <a href="https://wa.me/5513974069510?text=Ol%C3%A1!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20um%20or%C3%A7amento!" target="_blank" class="action_btn">Fale Conosco</a>
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -36,7 +35,7 @@
             <li><a href="#">Produtos & Serviços</a></li>
             <li><a href="#">Portfólio</a></li>
             <li><a href="#">Contato</a></li>
-            <li><a id="talkToUs" href="#" class="action_btn">Fale Conosco</a></li>
+            <li><a id="talkToUs" href="https://wa.me/5513974069510?text=Ol%C3%A1!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20um%20or%C3%A7amento!" target="_blank" class="action_btn">Fale Conosco</a></li>
         </div>
     </header>
 
@@ -49,16 +48,32 @@
 
     <footer>
         <div class="f-row">
+            <h2>PARCEIROS</h2>
+        </div>
+        <div class="f-row">
+            <div class="partners">
+                <img src="assets/suzano.png" alt="suzano">
+                <img src="assets/mimaki.png" alt="mimaki">
+                <img src="assets/imprimax.png" alt="imprimax">
+                <img src="assets/epson.png" alt="epson">
+                <img src="assets/lg.png" alt="lg">
+                <img src="assets/konica-minolta-logo-black-and-white.png" alt="konica minolta">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="f-row">
             <div class="f-col">
                 <img src="./assets/logo%20navbar.png" class="f-logo" alt="logo">
                 <p class="f-describe">Tecnologia em Impressão!</p>
             </div>
             <div class="f-col">
-                <h3>Escritório <div class="underline"><span></span></div> </h3>
-                <p>Rua dos Bobos nº0</p>
-                <p>Bairro 13, Santos</p>
-                <p class="f-email-id">grafica@gmail.com</p>
-                <h4>+13 991225942</h4>
+                <h3>Escritório<div class="underline"><span></span></div></h3>
+                <p>Rua Frei Vital, nº20</p>
+                <p>Embaré, Santos</p>
+                <a href="mailto:contato@4kimpressos.com.br"><p class="f-email-id">contato@4kimpressos.com.br</p></a>
+                <a href="tel:+5513974069510"><h4>13 97406-9510</h4></a>
             </div>
             <div class="f-col">
                 <h3>Links <div class="underline"><span></span></div></h3>
@@ -72,12 +87,12 @@
             <div class="f-col">
                 <h3>Onde nos Encontrar <div class="underline"><span></span></div></h3>
                 <div class="f-social-icons">
-                    <i class="si fa-regular fa-map"></i>
-                    <i class="si fab fa-waze"></i>
+                    <a href="https://www.google.com/maps/place/4K+Impressos/@-23.9627253,-46.3185626,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce03421361421d:0x71e0597f4e1b2074!8m2!3d-23.9627253!4d-46.3159877!16s%2Fg%2F11bbx079hk?entry=ttu" target="_blank"><i class="si fa-regular fa-map"></i></a>
+                    <a href="https://www.waze.com/live-map/directions/br/sp/grafica-em-santos-4k-impressos?navigate=yes&to=place.ChIJHUJhE0IDzpQRdCAbTn9Z4HE" target="_blank"><i class="si fab fa-waze"></i></a>
                 </div>
                 <div class="f-social-icons">
-                    <i class="si fab fa-instagram"></i>
-                    <i class="si fab fa-whatsapp"></i>
+                    <a href="https://www.instagram.com/4kimpressos/" target="_blank"><i class="si fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5513974069510?text=Ol%C3%A1!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20um%20or%C3%A7amento!" target="_blank"><i class="si fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
@@ -91,6 +106,12 @@
     const toggleBtn = document.querySelector('.toggle_btn');
     const toggleBtnIcon = document.querySelector('.toggle_btn i');
     const dropDownMenu = document.querySelector('.dropdown_menu');
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', function(){
+        if(this.window.pageYOffset > 0) return header.classList.add('active');
+        return header.classList.remove('active');
+    })
 
     toggleBtn.addEventListener('click', function () {
         dropDownMenu.classList.toggle('open');

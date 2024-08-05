@@ -1,3 +1,21 @@
+header {
+    position: fixed;
+    background: black;
+    padding: 0 2rem;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    height: 60px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 header li {
         list-style: none;
     }
@@ -16,6 +34,11 @@ header a {
         z-index: 1;
     }
 
+.active {
+    box-shadow: 0 0.2rem 0.5rem rgba(255, 255, 255, 1);
+    transition: 1s;
+}
+
 .h-hover {
     position: relative;
     background: #fff;
@@ -31,7 +54,6 @@ header a {
 .h-hover:hover {
     background: var(--clr);
     color: var(--clr);
-    letter-spacing: 0.25em;
     box-shadow: 0 0 35px var(--clr);
 }
 
@@ -87,27 +109,11 @@ header a {
     left: 80%;
 }
 
-
-    header {
-        position: fixed;
-        background: black;
-        padding: 0 2rem;
-        width: 100%;
-    }
-
-    .navbar {
-        height: 60px;
-        max-width: 1200px;
-        margin: 10px auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
     .navbar .logo img{
         margin-top: 20px;
         height: 6.8rem;
         width: auto;
+        margin-bottom: 15px;
     }
 
     .navbar .links {

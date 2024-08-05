@@ -6,9 +6,9 @@ footer {
     border-top-left-radius: 125px;
     font-size: 13px;
     line-height: 20px;
-    opacity: 1; /* Remove a transparência */
-    position: relative; /* Garante que o footer não sobreponha outros elementos */
-    margin-top: 20px; /* Faz com que o footer vá para o fundo do container */
+    opacity: 1;
+    position: relative;
+    margin-top: 20px;
 }
 
 .f-row{
@@ -76,6 +76,16 @@ footer ul li a{
     cursor: pointer;
 }
 
+.f-social-icons .si:hover{
+    transition: 0.5s ease-in-out;
+    scale: 1.2;
+}
+
+footer a{
+    text-decoration: none;
+    color: inherit;
+}
+
 footer hr{
     width: 90%;
     border: 0;
@@ -118,6 +128,34 @@ footer hr{
     animation: moving 2s linear infinite;
 }
 
+.f-row:nth-child(1){
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    margin-top: -40px;
+    margin-bottom: 20px;
+}
+
+.f-row ul li a:hover{
+    font-size: 15px;
+    color: black;
+    transition: 0.5s;
+}
+
+.partners{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.partners img{
+    width: 100px;
+}
+
 @keyframes moving {
     0%{
         left: -20px;
@@ -154,5 +192,9 @@ footer hr{
 
     .f-col h3{
         margin-top: 16px;
+    }
+
+    .partners img{
+        width: 40px;
     }
 }
