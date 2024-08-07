@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: 'Open Sans', sans-serif;
+    font-family: poppins;
 }
 
 html {
@@ -11,8 +11,13 @@ html {
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
 
+::selection{
+    color: #ffffff;
+    background: #252525;
+}
+
 body {
-    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+    min-height: 100vh;
     background-color: #000;
     background-size: cover;
     background-position: center;
@@ -26,10 +31,48 @@ body {
     position: relative;
 }
 
+main{
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
 
 h1 {
-    color: white; /* Define a cor do texto como branco */
-    font-size: 3rem; /* Tamanho da fonte */
-    margin-top: 20px; /* Espaçamento superior para não colar no topo */
-    text-align: center; /* Centraliza o texto */
+    color: white;
+    font-size: 3rem;
+    margin-top: 20px;
+    text-align: center;
 }
+
+.whatsapp{
+    display: none;
+}
+
+.whatsapp.show{
+    display: flex;
+}
+
+.whatsapp a{
+    width: 6.5rem;
+    height: 6.5rem;
+    color: white;
+    background: #25d366;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 99;
+    font-size: 4.5rem;
+}
+
+.whatsapp a:hover{
+    background: #0fc34c;
+    color: white;
+    transform: scale(1);
+}
+

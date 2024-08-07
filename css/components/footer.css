@@ -1,6 +1,6 @@
 footer {
     width: 100%;
-    background: linear-gradient(to right, dodgerblue, deeppink, yellow); /* Mantém o gradiente de fundo */
+    background: linear-gradient(to right, dodgerblue, deeppink, yellow);
     color: white;
     padding: 100px 0 30px;
     border-top-left-radius: 125px;

@@ -1,0 +1,97 @@
+    .contact{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        margin-bottom: 10rem;
+    }
+
+    .contact h1{
+        letter-spacing: 0.15rem;
+        font-size: 4.5rem;
+        color: white;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .contact h3{
+        font-weight: normal;
+        font-size: 1.8rem;
+        margin-top: -20px;
+        color: white;
+    }
+
+    .contact a p{
+        font-size: 1.1rem;
+        color: rgb(0, 0, 0);
+    }
+
+    .c-row{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    .c-col{
+        background: #fff;
+        font-weight: bold;
+        border-radius: 2px;
+        width: 10rem;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    }
+
+    .c-row a {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .c-col i {
+        font-size: 5rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .c-row a:hover .c-col {
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
+
+    #contact{
+        scroll-margin-top: 100px;
+    }
+
+    @media (max-width: 700px){
+        .contact{
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .contact h1{
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+
+        .contact h3{
+            font-size: 1.2rem;
+            margin-bottom:10px;
+        }
+
+        .c-row:nth-child(3){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+    }

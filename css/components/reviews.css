@@ -1,0 +1,139 @@
+.reviews{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    margin-bottom: 10rem;
+}
+
+.reviews-heading{
+    letter-spacing: 1px;
+    margin: 30px 0;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews-heading h1{
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+.reviews-heading h3{
+    font-weight: normal;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.reviews-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.review-box{
+    width: 500px;
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.profile-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.name-user{
+    display: flex;
+    flex-direction: column;
+}
+
+.name-user strong{
+    color: #3d3d3d;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.name-user span{
+    color: #979797;
+    font-size: 0.8rem;
+}
+
+.reviews-star{
+    color: #f9d71c;
+}
+
+.box-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.client-comment p{
+    font-size: 1rem;
+    color: #4b4b4b;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.review-box {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.review-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeIn 1s forwards;
+}
+
+
+@media(max-width: 700px){
+    .review-box{
+        width: 100%;
+        margin-top: 0;
+    }
+    .reviews-heading h1{
+        font-size: 3rem;
+    }
+    .reviews-heading h3{
+        font-size: 1.2rem;
+    }
+}
