@@ -1,3 +1,103 @@
-.homepage{
-    height: 100vh;
+.homepage {
+    margin-top: -50px;
+    width: 100%;
+    display: flex;
+    padding: 8rem;
+    gap: 30px;
+}
+
+.h-col {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.homepage h1 {
+    margin-top: -20px;
+    font-size: 80px;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.homepage h2 {
+    color: white;
+}
+
+.homepage span {
+    color: deeppink;
+}
+
+.home-image {
+    width: 50rem;
+    height: 50rem;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homepage img {
+    width: 90%;
+    height: 90%;
+}
+
+.homepage a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    background: white;
+    width: 25rem;
+    height: 6rem;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s;
+    border-radius: 5px;
+}
+
+@media (max-width: 992px){
+
+    .homepage {
+        padding: 12rem 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .h-col{
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .homepage a{
+        gap: 0;
+        padding: 0;
+    }
+
+
+    .homepage .h-col:nth-child(2){
+        display: none;
+    }
+
+    .homepage h1{
+        font-size: 60px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .homepage h2{
+        font-size: 15px;
+        text-align: center;
+    }
 }

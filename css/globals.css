@@ -9,6 +9,7 @@
 html {
     font-size: 62.5%;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    scrollbar-color: deeppink transparent;
 }
 
 ::selection{
@@ -70,9 +71,16 @@ h1 {
     font-size: 4.5rem;
 }
 
-.whatsapp a:hover{
+.whatsapp a:hover {
     background: #0fc34c;
     color: white;
     transform: scale(1);
 }
 
+.spacer{
+    height: 60px;
+}
+
+::-webkit-scrollbar-track{
+    background: transparent;
+}
