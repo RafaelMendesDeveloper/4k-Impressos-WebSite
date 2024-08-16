@@ -91,7 +91,6 @@
         .c-row:nth-child(3){
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
             margin-bottom: 20px;
         }
     }
